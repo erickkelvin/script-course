@@ -1,0 +1,25 @@
+<!-- Developed by Erick Santos -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %><span>by <%= author %></span></h1>
+    <a class="top-link" href="/new">&#10010; Add user</a>
+    <hr>
+    <% docs.forEach(function(user){ %>
+      <div class="user-item">
+        <div class="user-photo"><img src="<%= user.photo %>"/></div>
+        <h3><%= user.name %></h3>
+        <a href='/edit/<%= user._id %>'>&#9998; Edit</a>
+        <a href='/delete/<%= user._id %>'
+          onclick="return confirm('Are you sure that you want to delete this user?');">&#10006; Delete</a>
+        <div class="user-email">E-mail: <%= user.email %></div>
+        <div class="user-address">Address: <%= user.address %></div>
+        <div class="user-phone">Phone number: <%= user.phone %></div>
+      </div>
+    <% }) %>
+  </body>
+</html>
