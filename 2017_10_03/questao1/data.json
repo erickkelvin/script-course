@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Erick Kelvin",
+    "photo": "./img/erick_profile.jpg",
+    "email": "test@test.com",
+    "address": "Fortaleza, Brazil",
+    "phone": "123-456-7890"
+  },
+  {
+    "name": "Teste",
+    "photo": "",
+    "email": "teste@teste.com",
+    "address": "Ottawa, Canada",
+    "phone": "555-555-5555"
+  }
+]
