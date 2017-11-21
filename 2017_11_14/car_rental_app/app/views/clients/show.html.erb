@@ -1,0 +1,26 @@
+<%= render 'home/menu' %>
+
+<div class='content'>
+    <h1>Client details</h1>
+    <p>
+        <strong>Name:</strong>
+        <%= @client.name %>
+    </p>
+
+    <p>
+        <strong>Address:</strong>
+        <%= @client.address %>
+    </p>
+
+    <p>
+        <strong>CPF:</strong>
+        <%= @client.cpf %>
+    </p>
+
+    <p>
+        <strong>RG:</strong>
+        <%= @client.rg %>
+    </p>
+
+    <%= link_to 'Show all clients', clients_path %>
+</div>

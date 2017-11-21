@@ -1,0 +1,13 @@
+<div class='menu'>
+    <div id='title'><%= link_to '/' do %>
+        <strong><%= fa_icon 'car' %> Car Rental System</strong>
+        <span id="author">by Erick Santos</span>
+    <% end %>
+    </div>
+
+    <div class='links'>
+        <%= link_to 'Clients', clients_path %>
+        <%= link_to 'Cars', cars_path %>
+        <%= link_to 'Rentals', rentals_path %>
+    </div>
+</div>

@@ -12,4 +12,79 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+
+@font-face {
+    font-family: avenir_next;
+    src: url(/assets/avenir_next_regular.woff);
+}
+
+html, body {
+    font-family: avenir_next;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.content {
+    margin: 0vh 15vw;
+    max-width: 100%;
+    animation: easein 1s;
+}
+
+.home {
+    animation: easein 1s;
+}
+
+@keyframes easein {
+    from { opacity:0; transform: translateY(-2%); }
+    to   { opacity:1; transform: translateY(0%); }
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: rgb(68, 156, 150);
+}
+
+a:active {
+    color: rgba(68, 156, 149, 0.5);
+}
+
+h1 {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+table {
+    min-width: 100%;
+}
+
+td {
+    padding: 6px;
+    border-radius:3px;
+}
+
+td.link {
+    text-align: center;
+    width:25px;
+}
+
+th {
+    background-color: rgba(68, 156, 149, 0.4);
+    padding: 6px;
+    border-radius:3px;
+}
+
+td:nth-child(1) {
+    width:15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+tr {
+    background-color: rgba(68, 156, 149, 0.1);
+}

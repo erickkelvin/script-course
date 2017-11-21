@@ -1,0 +1,34 @@
+<%= form_for @car do |f| %>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@car.errors.count, "error") %> found
+      </h2>
+      <ul>
+        <% @car.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :car_type %><br>
+    <%= f.select :car_type, options_for_select(['1 (Urban)', '2 (Motocross)', '3 (Luxury)']), {:prompt => 'Select a car type...'} %>
+  </p>
+  
+  <p>
+    <%= f.label :plate %><br>
+    <%= f.text_field :plate %>
+  </p>
+
+  <p>
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+  
+<% end %>

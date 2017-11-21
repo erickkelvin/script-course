@@ -1,0 +1,21 @@
+<%= render 'home/menu' %>
+
+<div class='content'>
+    <h1>Car details</h1>
+    <p>
+        <strong>Plate:</strong>
+        <%= @car.plate %>
+    </p>
+
+    <p>
+        <strong>Type:</strong>
+        <%= @car.car_type %>
+    </p>
+
+    <p>
+        <strong>Year:</strong>
+        <%= @car.year %>
+    </p>
+
+    <%= link_to 'Show all cars', cars_path %>
+</div>

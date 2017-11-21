@@ -1,0 +1,26 @@
+<%= render 'home/menu' %>
+
+<div class='content'>
+    <h1>Rental details</h1>
+    <p>
+        <strong>Client name:</strong>
+        <%= link_to @client.name, client_path(@client) %>
+    </p>
+
+    <p>
+        <strong>Car plate:</strong>
+        <%= link_to @car.plate, car_path(@car) %>
+    </p>
+
+    <p>
+        <strong>Start date:</strong>
+        <%= @rental.start_date %>
+    </p>
+
+    <p>
+    <strong>End date:</strong>
+    <%= @rental.end_date %>
+    </p>
+
+    <%= link_to 'Show all rentals', rentals_path %>
+</div>
