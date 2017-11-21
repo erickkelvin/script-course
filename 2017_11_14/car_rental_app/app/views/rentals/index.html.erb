@@ -20,8 +20,8 @@
       <td><%= rental.id %></td>
       <td><%= link_to @client.name, client_path(@client) %></td>
       <td><%= link_to @car.plate, car_path(@car) %></td>
-      <td><%= rental.start_date %></td>
-      <td><%= rental.end_date %></td>
+      <td><%= rental.start_date.strftime("%d/%m/%Y") %></td>
+      <td><%= rental.end_date.strftime("%d/%m/%Y") %></td>
       <td class='link'>
         <%= link_to rental_path(rental) do %>
           <%= fa_icon 'info-circle' %>

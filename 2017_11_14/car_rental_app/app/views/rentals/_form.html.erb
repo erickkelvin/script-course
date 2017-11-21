@@ -14,22 +14,22 @@
 
   <p>
     <%= f.label :client_id %><br>
-    <%= select :rental, :client_id, Client.all.collect {|client| [ client.name, client.id ] }, {:prompt => 'Select client...'} %>
+    <%= select :rental, :client_id, Client.all.collect {|client| [ client.name, client.id ] }, {prompt: 'Select client...'} %>
   </p>
 
   <p>
     <%= f.label :car_id %><br>
-    <%= select :rental, :car_id, options_from_collection_for_select(@available_cars, "id", "plate", @rental.car_id), {:prompt => 'Select an available car...'} %>
+    <%= select :rental, :car_id, options_from_collection_for_select(@available_cars, "id", "plate", @rental.car_id), {prompt: 'Select an available car...'} %>
   </p>
 
   <p>
     <%= f.label :start_date %><br>
-    <%= date_select('rental', 'start_date') %>
+    <%= date_select('rental', 'start_date', :order => [:day, :month, :year]) %>
   </p>
 
   <p>
     <%= f.label :end_date %><br>
-    <%= date_select('rental', 'end_date') %>
+    <%= date_select('rental', 'end_date', :order => [:day, :month, :year]) %>
   </p>
 
   <p>

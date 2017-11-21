@@ -18,7 +18,7 @@
       <td><%= client.id %></td>
       <td><%= link_to client.name, client_path(client) %></td>
       <td><%= link_to client.address, 'https://maps.google.com/?q=' + client.address, target: :_blank %></td>
-      <td><%= client.cpf %></td>
+      <td><%= client.cpf.gsub(/(\d{3})(\d{3})(\d{3})(\d{2})/, '\1.\2.\3-\4') %></td>
       <td><%= client.rg %></td>
       <td class='link'>
         <%= link_to client_path(client) do %>

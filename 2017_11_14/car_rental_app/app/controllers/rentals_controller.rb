@@ -5,8 +5,6 @@ class RentalsController < ApplicationController
     
     def show
         @rental = Rental.find(params[:id])
-        @client = Client.find(@rental.client_id)
-        @car = Car.find(@rental.car_id)
     end
 
     def new

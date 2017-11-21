@@ -4,12 +4,12 @@
     <h1>Rental details</h1>
     <p>
         <strong>Client name:</strong>
-        <%= link_to @client.name, client_path(@client) %>
+        <%= link_to @rental.client.name, client_path(@rental.client) %>
     </p>
 
     <p>
         <strong>Car plate:</strong>
-        <%= link_to @car.plate, car_path(@car) %>
+        <%= link_to @rental.car.plate, car_path(@rental.car) %>
     </p>
 
     <p>

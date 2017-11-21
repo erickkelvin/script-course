@@ -88,3 +88,15 @@ td:nth-child(1) {
 tr {
     background-color: rgba(68, 156, 149, 0.1);
 }
+
+.field_with_errors {
+    color: rgb(224, 2, 2);
+}
+.field_with_errors label:after{
+    font-family: FontAwesome;
+    content:' \f06a';
+}
+.field_with_errors select, .field_with_errors input {
+    border: 1px solid rgb(224, 2, 2);
+    background-color: rgb(243, 230, 230);
+}
