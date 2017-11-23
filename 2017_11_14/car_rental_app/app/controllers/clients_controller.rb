@@ -20,6 +20,7 @@ class ClientsController < ApplicationController
         
         if @client.save
             redirect_to @client
+            flash[:notice] = "Added new client successfully!"
         else
             render 'new'
         end
@@ -30,6 +31,7 @@ class ClientsController < ApplicationController
         
         if @client.update(client_params)
             redirect_to @client
+            flash[:notice] = "Updated client successfully!"
         else
             render 'edit'
         end
@@ -37,9 +39,12 @@ class ClientsController < ApplicationController
 
     def destroy
         @client = Client.find(params[:id])
-        @client.destroy
-       
         redirect_to clients_path
+        if @client.destroy
+            flash[:notice] = "Deleted client successfully!"
+        else
+            flash[:alert] = @client.errors.full_messages[0]
+        end 
     end
     
     private

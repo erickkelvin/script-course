@@ -28,7 +28,7 @@ html, body {
 }
 
 .content {
-    margin: 0vh 15vw;
+    margin: 2vh 15vw;
     max-width: 100%;
     animation: easein 1s;
 }
@@ -92,11 +92,54 @@ tr {
 .field_with_errors {
     color: rgb(224, 2, 2);
 }
+
 .field_with_errors label:after{
     font-family: FontAwesome;
     content:' \f06a';
 }
+
 .field_with_errors select, .field_with_errors input {
     border: 1px solid rgb(224, 2, 2);
     background-color: rgb(243, 230, 230);
+}
+
+div.msg {
+    width:100%;
+    display:none;
+    text-align: center;
+    position: absolute;
+    top: 42px;
+}
+
+
+div.flash{
+    display:inline-block;
+    padding:0 15px;
+    margin: 4px 0;
+    border-radius:4px;
+    height: 1.8rem;
+    line-height:1.8rem;
+    font-size:14px;
+    color: #fff;
+    z-index: 2;
+}
+
+div.notice {
+    background-color: #5cb85c;
+}
+
+div.alert{
+    background-color: #cd5c5c;
+}
+
+div.notice:before{
+    font-family: FontAwesome;
+    content:'\f058';
+    margin-right:6px;
+}
+
+div.alert:before{
+    font-family: FontAwesome;
+    content:'\f06a';
+    margin-right:6px;
 }

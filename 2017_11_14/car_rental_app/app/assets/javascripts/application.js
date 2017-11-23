@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('ready', function(){
+    $("div.msg").fadeIn(500).delay(3000).fadeOut(300);
+});

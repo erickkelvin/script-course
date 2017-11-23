@@ -11,3 +11,11 @@
         <%= link_to 'Rentals', rentals_path %>
     </div>
 </div>
+<div class="msg">
+    <% if flash[:alert] %>
+        <div class="flash alert"><%= flash[:alert] %></div>
+    <% end %>
+    <% if flash[:notice] %>
+        <div class="flash notice"><%= flash[:notice] %></div>
+    <% end %>
+</div>
