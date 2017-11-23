@@ -20,7 +20,7 @@ class ClientsController < ApplicationController
         
         if @client.save
             redirect_to @client
-            flash[:notice] = "Added new client successfully!"
+            flash[:notice] = "Created client successfully!"
         else
             render 'new'
         end

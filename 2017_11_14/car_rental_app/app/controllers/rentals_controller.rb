@@ -25,6 +25,7 @@ class RentalsController < ApplicationController
         
         if @rental.save
             redirect_to @rental
+            flash[:notice] = "Created rental successfully!"
         else
             @available_cars = get_available_cars
             render 'new'
@@ -36,6 +37,7 @@ class RentalsController < ApplicationController
         
         if @rental.update(rental_params)
             redirect_to @rental
+            flash[:notice] = "Updated rental successfully!"
         else
             @available_cars = get_available_cars
             @available_cars.push(Car.find(@rental.car_id))
@@ -45,8 +47,12 @@ class RentalsController < ApplicationController
 
     def destroy
         @rental = Rental.find(params[:id])
-        @rental.destroy
         redirect_to rentals_path
+        if @rental.destroy
+            flash[:notice] = "Deleted rental successfully!"
+        else
+            flash[:alert] = @rental.errors.full_messages[0]
+        end 
     end
     
     private

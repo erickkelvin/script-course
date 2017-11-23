@@ -20,7 +20,7 @@ class CarsController < ApplicationController
         
         if @car.save
             redirect_to @car
-            flash[:notice] = "Added new car successfully!"
+            flash[:notice] = "Created car successfully!"
         else
             render 'new'
         end
