@@ -9,6 +9,7 @@ class CarsController < ApplicationController
 
     def new
         @car = Car.new
+        @car.year = nil
     end
 
     def edit

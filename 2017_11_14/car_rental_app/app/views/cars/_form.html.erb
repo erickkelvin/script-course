@@ -11,20 +11,20 @@
       </ul>
     </div>
   <% end %>
-
-  <p>
-    <%= f.label :car_type %><br>
-    <%= f.select :car_type, options_for_select(['1 (Urban)', '2 (Motocross)', '3 (Luxury)']), {:prompt => 'Select a car type...'} %>
-  </p>
   
   <p>
     <%= f.label :plate %><br>
-    <%= f.text_field :plate %>
+    <%= f.text_field :plate, maxlength: 9, size:20 %>
+  </p>
+
+  <p>
+    <%= f.label :car_type %><br>
+    <%= f.select :car_type, options_for_select(['1 (Urban)', '2 (Motocross)', '3 (Luxury)']), prompt: 'Select a car type...' %>
   </p>
 
   <p>
     <%= f.label :year %><br>
-    <%= f.text_field :year, maxlength:4, size: 20 %>
+    <%= select_year @car.year, field_name: 'year', prefix:'car', prompt: 'Select year...', start_year: (Date.today - 20.years).year, end_year: (Date.today + 2.years).year %>
   </p>
   
   <p>
