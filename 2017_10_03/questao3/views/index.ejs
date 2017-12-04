@@ -1,0 +1,46 @@
+<!-- Developed by Erick Santos -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %> <span>by <%= author %></span></h1>
+    <div class="nickname_container" id="nick">
+      <span>Enter your nickname:</span>
+      <form id="submit">
+        <input type="text" id="nickname" autocomplete="off" />
+      </form>
+    </div>
+    <div id="game_info">
+      <div id="room_info">
+          <strong>Room: </strong>
+        </div>
+  
+      <div id="player_info">
+        <strong>Players: </strong>
+        <ol>
+            <li id="player1"></li>
+            <li id="player2">Waiting...</li>
+        </ol>
+      </div>
+    </div>
+
+    <div id="turn_info" style="display:none;"></div>
+
+    <table class="game">
+      <% for (var i=0; i<3; i++) { %>
+        <tr>
+          <% for (var j=0; j<3; j++) { %>
+            <td id="<%= i %>-<%= j %>"></td>
+          <% } %>
+        </tr>
+      <% } %>
+    </table>
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/socket.io-client/socket.io.js"></script>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    padding: 20px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: rgb(210, 233, 240);
+    text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table.game {
+  display: none;
+  border-collapse: collapse;
+  width:30vmax;
+  height:30vmax;
+  min-width:350px;
+  min-height:350px;
+  max-width: 500px;
+  max-height:500px;
+  margin: 60px auto;
+}
+
+.game td {
+  width: 33.333%;
+  height: 33.333%;
+  border: 5px solid rgb(25, 59, 109);
+  text-align: center;
+  font-weight: bold;
+  font-size:50px;
+  color:rgb(110, 0, 0);
+}
+
+.game td:first-of-type {
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.game td:nth-of-type(2) {
+  border-top-color: transparent;
+}
+
+.game td:nth-of-type(3) {
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+.game tr:nth-of-type(3) td {
+  border-bottom-color: transparent;
+}
+
+.circle:before {
+  font-size: 1.9em;
+  content: '\26AC';
+}
+
+.cross:before {
+  font-size: 1.2em;
+  content: '\2715';
+}
+
+.game td:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#game_info {
+  background-color: rgba(0, 0, 0, 0.05);
+  display:none;
+  text-align:left;
+  padding:5px;
+  width:200px;
+  margin: auto;
+  margin-bottom:10px;
+}
+
+ol {
+  margin-left:-10px;
+  margin-top: 0px;
+  margin-bottom:0px;
+}
+
+h1 span {
+  font-size: 14px;
+}
